@@ -25,7 +25,7 @@ SECRET_KEY = 'vfx2(p$hnefmv6b$m$188kq+zexi98o&uq0_&r+(rkra)m#kqb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['falldetector.infsolution.com.br','localhost',]
 
 
 # Application definition
