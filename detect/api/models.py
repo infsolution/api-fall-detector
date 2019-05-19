@@ -16,4 +16,5 @@ class PositionEstate(models.Model):
 	acelX = models.DecimalField(max_digits=5, decimal_places=2)
 	acelY = models.DecimalField(max_digits=5, decimal_places=2)
 	acelZ = models.DecimalField(max_digits=5, decimal_places=2)
+	created_at = models.DateTimeField(auto_now_add=True)
 

@@ -12,7 +12,7 @@ class PositionEstateSerializer(serializers.HyperlinkedModelSerializer):
 	device =  serializers.SlugRelatedField(queryset=Device.objects.all(), slug_field='code')
 	class Meta:
 		model = PositionEstate
-		fields = ('url','pk', 'device','posX','posY','posZ','acelX','acelY','acelZ')
+		fields = ('url','pk', 'device','posX','posY','posZ','acelX','acelY','acelZ','created_at')
 
 class UserCreateSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
