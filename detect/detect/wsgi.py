@@ -24,5 +24,5 @@ try:
 except Exception:
 	if 'mod_wsgi' in sys.modules:
 		traceback.print_exc()
-		os.kill(os.getpd(), signal.SIGINT)
-		TIME.SLEEP(2.5)
+		os.kill(os.getpid(), signal.SIGINT)
+		time.sleep(2.5)
