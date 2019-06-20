@@ -18,3 +18,9 @@ class UserCreateSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model=User
 		fields=('pk', 'username', 'email', 'password')
+
+
+class DataSetSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = DataSet
+		fields = ('url','pk', 'data_set', 'created_at')

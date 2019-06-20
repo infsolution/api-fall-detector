@@ -37,3 +37,13 @@ class PositionEstateDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = PositionEstate.objects.all()
 	serializer_class = PositionEstateSerializer
 	name='positionestate-detail'
+
+class DataSetList(generics.ListCreateAPIView):
+	queryset = DataSet.objects.all()
+	serializer_class = DataSetSerializer
+	name='dataset-list'
+
+class DataSetDetail(generics.RetrieveUpdateDestroyAPIView):
+	queryset = DataSet.objects.all()
+	serializer_class = DataSetSerializer
+	name='dataset-detail'

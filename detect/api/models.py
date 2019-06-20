@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+import jsonfield
 from django.db import models
 
 
@@ -20,5 +21,9 @@ class PositionEstate(models.Model):
 
 	class Meta:
 		ordering = ('-id',)
+
+class DataSet(models.Model):
+	data_set = jsonfield.JSONField()
+	created_at = models.DateTimeField(auto_now_add=True)
 
 

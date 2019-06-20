@@ -9,4 +9,6 @@ urlpatterns = [
 	path('device/<int:pk>/', views.DeviceDetail.as_view(), name=views.DeviceDetail.name),
     path('position/', views.PositionEstateList.as_view(), name=views.PositionEstateList.name),
     path('position/<int:pk>/', views.PositionEstateDetail.as_view(), name=views.PositionEstateDetail.name),
+    path('dataset/', views.DataSetList.as_view(), name=views.DataSetList.name),
+    path('dataset/<int:pk>/', views.DataSetDetail.as_view(), name=views.DataSetDetail.name),
 ]
