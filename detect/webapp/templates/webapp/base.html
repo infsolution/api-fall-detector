@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script defer src="{% static 'fontawesome/js/fontawesome-all.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome-all.min.css' %}">
+
+	<title>HellpSen</title>
+</head>
+<body>	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav-main">
+		<div class="container-fluid">
+		 	<a class="navbar-brand" href="{% url 'index' %}">
+		    	<img src="#" width="30" height="30" alt="">
+		    	SosiAll
+		 	</a>
+		 	
+
+		 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		 	</button>
+		 	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			    <ul class="navbar-nav ml-auto">
+			     	<li class="nav-item active">
+				      	<form class="form-inline" action="#" method="GET">
+						    <div class="input-group mb-6">
+							  <input type="text" class="form-control" name="word" placeholder="Procure pessoas ou coisas"  aria-describedby="basic-addon2" required="">
+							  <div class="input-group-append">
+							    <button class="btn btn-primary" type="submit">Prourar</button>
+							  </div>
+							</div>
+					 	</form>
+			     	</li>			     	
+			     	<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opções
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <!--a class="dropdown-item" href="#">Action</a-->
+				          <a class="dropdown-item" href="#">Login</a>
+				          <a class="dropdown-item" href="#">Mudar Senha</a>
+				          <div class="dropdown-divider"></div>
+				          <a class="dropdown-item"href="/logout/">Sair</a>
+				        </div>
+				     </li>
+				     <li class="nav-item">
+			        	<a class="nav-link" href="#"><img class="rounded-circle" src="#" width="30" alt=""></a>
+			     	</li>
+				     <li class="nav-item">
+			        	<a class="nav-link" href="#">{{perfil_logado.nome}}</a>
+			     	</li>
+			    </ul>
+		  	</div>
+		</div>  
+</nav>
+	<div class="container">
+        {% block body %}
+        {% endblock %}
+	</div>
+
+	<script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
