@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'bootstrap',
     'fontawesome',
     'rest_framework',
+    'rest_framework.authtoken',
     'api',
     'webapp',
+    'game',
 ]
 
 MIDDLEWARE = [
